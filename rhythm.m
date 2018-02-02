@@ -105,7 +105,7 @@ set(filt_popup,'Value',3)
 % Create Button Group
 anal_data = uibuttongroup('Parent',p1,'Title','Analyze Data','FontSize',12,'Position',[0.275 0.015 .272 .180]);
 % Popup menu for selecting type of analysis
-anal_select = uicontrol('Parent',anal_data,'Style','popupmenu','FontSize',12,'String',{'-----','Activation','Conduction','APD','Phase','Dominant Frequency'},'Position',[5 85 165 25],'Callback',{@anal_select_callback});
+anal_select = uicontrol('Parent',anal_data,'Style','popupmenu','FontSize',12,'String',{'-----','Activation','APD','Dominant Frequency'},'Position',[5 85 165 25],'Callback',{@anal_select_callback});
 
 % Invert Color Map Option
 invert_cmap = uicontrol('Parent',anal_data,'Style','checkbox','FontSize',12,'String','Invert Colormaps','Position',[175 88 150 25],'Visible','on','Callback',{@invert_cmap_callback});
@@ -1081,21 +1081,21 @@ handles.apdC = [];  % variable for storing apd calculations
             aMap(handles.cmosData,handles.a_start,handles.a_end,handles.Fs,handles.cmap);
             close(gg)
         % FOR CONDUCTION VELOCITY
-        elseif check == 3
-            rect = getrect(movie_scrn);
-            gg=msgbox('Building Conduction Velocity Map...');
-            cMap(handles.cmosData,handles.a_start,handles.a_end,handles.Fs,handles.bg,rect);
-            close(gg)
+        %elseif check == 3
+        %    rect = getrect(movie_scrn);
+        %    gg=msgbox('Building Conduction Velocity Map...');
+        %    cMap(handles.cmosData,handles.a_start,handles.a_end,handles.Fs,handles.bg,rect);
+        %    close(gg)
         % FOR ACTION POTENTIAL DURATION
-        elseif check == 4
+        elseif check == 3
             gg=msgbox('Creating Global APD Map...');
             handles.percentAPD = str2double(get(percentapd_edit,'String'));
             apdMap(handles.cmosData,handles.a_start,handles.a_end,handles.Fs,handles.percentAPD,handles.cmap);
             close(gg)
         % FOR PHASE MAP CALCULATION
-        elseif check == 5
-            phaseMap(handles.cmosData,handles.starttime,handles.endtime,handles.Fs,handles.cmap);
-        elseif check == 6
+       % elseif check == 5
+       %     phaseMap(handles.cmosData,handles.starttime,handles.endtime,handles.Fs,handles.cmap);
+        elseif check == 4
             gg=msgbox('Calculating Dominant Frequency Map...');
             calDomFreq(handles.cmosData,handles.Fs,handles.cmap);
             close(gg)
