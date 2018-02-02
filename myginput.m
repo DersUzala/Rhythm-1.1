@@ -35,6 +35,9 @@ function [out1,out2,out3,out4] = myginput(arg1,strpointertype)
 % of each possible axes. If the position of the gca doesn't align with the
 % active axes I'll break the function and output a warning to the user.
 
+% Email optocardiography@gmail.com for any questions or concerns.
+% Refer to efimovlab.org for more information.
+
 
 out1 = []; out2 = []; out3 = []; y = []; z = [];
 

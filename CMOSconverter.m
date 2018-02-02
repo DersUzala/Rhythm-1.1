@@ -16,16 +16,6 @@ function cmosData = CMOSconverter(olddir,oldfilename)
 %                + background image = bgimage
 %                + dual camera setting = dual(1 - yes / 0 - no)
 %
-% REFERENCES
-%
-% ADDITIONAL NOTES
-%
-% RELEASE VERSION ?.?.?
-%
-% AUTHOR: SciMedia
-%
-% MAINTAINED BY: Christopher Gloschat - (cgloschat@gmail.com) - [Jan. 2015 - Present] 
-%
 % MODIFICATION LOG:
 %
 % January 15, 2016 - SciMedia has released a new camera system with
@@ -33,6 +23,12 @@ function cmosData = CMOSconverter(olddir,oldfilename)
 % established *.rsd format and the intorduction of the new *.gsd format. I
 % have updated the code for the *.rsd changes and added code to recognzie
 % and extract data from the *.gsd format.
+
+% Email optocardiography@gmail.com for any questions or concerns.
+% Refer to efimovlab.org for more information.
+
+
+
 
 %% Code
 newfilename = [oldfilename(1:length(oldfilename)-3),'mat'];

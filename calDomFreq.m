@@ -1,4 +1,7 @@
 function maxf = calDomFreq(data,Fs,cmap)
+% Email optocardiography@gmail.com for any questions or concerns.
+% Refer to efimovlab.org for more information.
+
 %% Window Data with Tukey Window to Minimize Edge Effects
 if size(data,3) == 1
     w_m = tukeywin(size(data,2),.05);

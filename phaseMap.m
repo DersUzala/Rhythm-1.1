@@ -21,7 +21,6 @@ function phase = phaseMap(data,starttime,endtime,Fs,cmap)
 %
 % AUTHOR: Jake Laughner
 %
-% MAINTED BY: Christopher Gloschat - (cgloschat@gmail.com) - [Jan. 2015 - Present]
 %
 % MODIFICATION LOG:
 % February 12, 2015 - I restructured the code to first calculate phase,
@@ -29,6 +28,11 @@ function phase = phaseMap(data,starttime,endtime,Fs,cmap)
 % through the phase images capturing them as a video. I also added a
 % progress bar.
 %
+% Email optocardiography@gmail.com for any questions or concerns.
+% Refer to efimovlab.org for more information.
+
+
+
 %% Code %%
 % Calculate Hilbert Transform
 if size(data,3) == 1

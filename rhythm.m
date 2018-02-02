@@ -6,32 +6,10 @@ function rhythm
 % By Matt Sulkin, Jake Laughner, Xinyuan Sophia Cui, Jed Jackoway
 % Washington University in St. Louis -- Efimov Lab
 %
-% Currently maintained by: Christopher Gloschat [Jan. 2015 - Present]
-%
-% For any questions and suggestions, please email us at:
-% cgloschat@gmail.com or igor@wustl.edu
-%
-% Modification Log:
-% Jan. 23, 2015 - 1) Size of tools adjusted for MATLAB 2014a to constrain 
-% all tools and labels to their groups. Mostly cosmetic adjustment. 2) I
-% built in fail safes to prevent the GUI from doing undesired things. For
-% example, if cancel was selected after clicking get directory it set the
-% directory to root. Now it will only set the directory if a directory is
-% set.
-%
-% Jan. 26, 2015 - The invert_cmap function was added to facilitate the
-% inversion of the default colormap used for maps of activation time and
-% action potential duration.
-%
-% Feb. 9, 2015 - With the MATLAB2014b release multiple commands in the
-% visualization toolkit were changed. Among these were the video writer
-% commands and the command for tracking mouse clicks on the GUI. These
-% commands have been updated and RHYTHM should now be functional on 2014b.
-%
-% Feb. 24, 2016 - The GUI has been streamlined to reduce clutter and create
-% a space for plugins created by future users.
-%
-%
+% Email optocardiography@gmail.com for any questions or concerns.
+% Refer to efimovlab.org for more information.
+
+
 
 %% Create GUI structure
 scrn_size = get(0,'ScreenSize');
@@ -1092,9 +1070,9 @@ handles.apdC = [];  % variable for storing apd calculations
             handles.percentAPD = str2double(get(percentapd_edit,'String'));
             apdMap(handles.cmosData,handles.a_start,handles.a_end,handles.Fs,handles.percentAPD,handles.cmap);
             close(gg)
-        % FOR PHASE MAP CALCULATION
-       % elseif check == 5
-       %     phaseMap(handles.cmosData,handles.starttime,handles.endtime,handles.Fs,handles.cmap);
+        %FOR PHASE MAP CALCULATION
+        %elseif check == 5
+        %    phaseMap(handles.cmosData,handles.starttime,handles.endtime,handles.Fs,handles.cmap);
         elseif check == 4
             gg=msgbox('Calculating Dominant Frequency Map...');
             calDomFreq(handles.cmosData,handles.Fs,handles.cmap);

@@ -13,6 +13,10 @@ function normData = normalize_data(data)
 % data values. The normalized data subtracts off the minimum values and 
 % divides by the difference between the min and max. 
 
+% Email optocardiography@gmail.com for any questions or concerns.
+% Refer to efimovlab.org for more information.
+
+
 %% Code
 if size(data,3) == 1
     min_data = repmat(min(data,[],2),[1 size(data,2)]);
